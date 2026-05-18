@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Teen Mental Health Predictor</title>
+</head>
+
+<body>
+
+<h1>Teen Mental Health Predictor</h1>
+
+<form action="/predict" method="post">
+
+    <input type="number" name="age" placeholder="Age" required><br><br>
+
+    <select name="gender">
+        <option>male</option>
+        <option>female</option>
+    </select><br><br>
+
+    <input type="number" step="0.1"
+    name="daily_social_media_hours"
+    placeholder="Daily Social Media Hours" required><br><br>
+
+    <select name="platform_usage">
+        <option>Instagram</option>
+        <option>Facebook</option>
+        <option>Snapchat</option>
+        <option>YouTube</option>
+    </select><br><br>
+
+    <input type="number" step="0.1"
+    name="sleep_hours"
+    placeholder="Sleep Hours" required><br><br>
+
+    <input type="number" step="0.1"
+    name="screen_time_before_sleep"
+    placeholder="Screen Time Before Sleep" required><br><br>
+
+    <input type="number" step="0.1"
+    name="academic_performance"
+    placeholder="Academic Performance" required><br><br>
+
+    <input type="number" step="0.1"
+    name="physical_activity"
+    placeholder="Physical Activity" required><br><br>
+
+    <select name="social_interaction_level">
+        <option>low</option>
+        <option>medium</option>
+        <option>high</option>
+    </select><br><br>
+
+    <input type="number"
+    name="stress_level"
+    placeholder="Stress Level" required><br><br>
+
+    <input type="number"
+    name="anxiety_level"
+    placeholder="Anxiety Level" required><br><br>
+
+    <input type="number"
+    name="addiction_level"
+    placeholder="Addiction Level" required><br><br>
+
+    <button type="submit">
+        Predict
+    </button>
+
+</form>
+
+<h2>{{ prediction_text }}</h2>
+
+</body>
+</html>
